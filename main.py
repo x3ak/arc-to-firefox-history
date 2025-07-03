@@ -6,10 +6,10 @@ This script imports Arc browser history into Firefox's places.sqlite database,
 making the history available in Firefox's address bar autocomplete and history view.
 
 Usage:
-    python exporthistory.py <arc_json_path> <firefox_places_path>
+    python main.py <arc_json_path> <firefox_places_path>
 
 Example:
-    python exporthistory.py ~/Library/Application\ Support/Arc/StorableArchiveItems.json \
+    python main.py ~/Library/Application\ Support/Arc/StorableArchiveItems.json \
         ~/Library/Application\ Support/Firefox/Profiles/xyz123.default/places.sqlite
 
 Requirements:
@@ -203,11 +203,11 @@ def main():
         epilog="""
 Examples:
   # Import from default Arc location to Firefox
-  python exporthistory.py ~/Library/Application\\ Support/Arc/StorableArchiveItems.json \\
+  python main.py ~/Library/Application\\ Support/Arc/StorableArchiveItems.json \\
       ~/Library/Application\\ Support/Firefox/Profiles/xyz123.default/places.sqlite
   
   # Import from custom locations
-  python exporthistory.py /path/to/arc/data.json /path/to/firefox/places.sqlite
+  python main.py /path/to/arc/data.json /path/to/firefox/places.sqlite
         """
     )
     
